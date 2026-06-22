@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>索引·开云</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+      background: #f9f7f5;
+      color: #2e2a27;
+      line-height: 1.7;
+    }
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #1e1c1a 0%, #2b2825 100%);
+      color: #efebe8;
+      padding: 4rem 2rem 3.2rem;
+      text-align: center;
+      border-bottom: 3px solid #cb9e6c;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 350;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #ccc6be;
+      font-weight: 300;
+    }
+    .hero span {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #cb9e6c;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      border: 1px solid rgba(203, 158, 108, 0.3);
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+    }
+    /* 正文区（浅色卡片感） */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.8rem 2rem 3.6rem;
+    }
+    .intro-card {
+      background: white;
+      padding: 2.6rem 2.8rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+      margin-bottom: 2.8rem;
+      border: 1px solid #e8e2db;
+    }
+    .intro-card p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    .intro-card p:last-child {
+      margin-bottom: 0;
+    }
+    .intro-card strong {
+      font-weight: 500;
+      color: #1e1c1a;
+    }
+    /* 特点列表 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+    .feature-item {
+      background: #f4f1ec;
+      padding: 1.4rem 1.6rem;
+      border-radius: 18px;
+      transition: background 0.2s;
+    }
+    .feature-item:hover {
+      background: #ede8e0;
+    }
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #352f2a;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .feature-item h3::before {
+      content: "·";
+      color: #cb9e6c;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .feature-item p {
+      font-size: 0.96rem;
+      color: #4f4842;
+      margin-left: 1.2rem;
+    }
+    .link-embed {
+      background: #f4f1ec;
+      padding: 1.6rem 2rem;
+      border-radius: 20px;
+      margin: 1.8rem 0 0.8rem;
+      border-left: 4px solid #cb9e6c;
+    }
+    .link-embed p {
+      font-size: 1.05rem;
+    }
+    a {
+      color: #a57c4e;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid rgba(165, 124, 78, 0.25);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    a:hover {
+      color: #7c5e3a;
+      border-bottom-color: #7c5e3a;
+    }
+    .gentle-end {
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e2dbd3;
+      font-size: 1rem;
+      color: #5a524b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .gentle-end .faq-hint {
+      background: #f0ebe5;
+      padding: 0.8rem 1.4rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: #3e3732;
+    }
+    .faq-hint span {
+      font-weight: 450;
+      color: #a57c4e;
+    }
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 1.8rem 1rem 2.8rem;
+      }
+      .intro-card {
+        padding: 1.8rem 1.4rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .link-embed {
+        padding: 1.2rem 1.2rem;
+      }
+      .gentle-end {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 440px) {
+      .hero {
+        padding: 3rem 1rem 2.4rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .feature-item h3::before {
+        font-size: 1.2rem;
+      }
+      .feature-item p {
+        margin-left: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>开云·索引</h1>
+    <p>资料整理与信息归位——将散落的线索聚拢为可翻阅的片段。</p>
+    <span>叙述式 · 索引笔记</span>
+  </header>
+
+  <div class="container">
+    <div class="intro-card">
+      <p>
+        很长一段时间里，我都在做同一件事：把浏览过程中遇到的、值得留存的片段，分门别类地收进一个安静的角落。后来这些片段逐渐连成了线，指向一个频繁出现的名字——<strong>开云</strong>。不是刻意去定义它，而是从零散的笔记里，慢慢梳理出一个轮廓。
+      </p>
+      <p>
+        无论是早期文档里提到的结构思路，还是后来在各类讨论中被反复引用的案例，<a href="https://home-web-ky.com">开云</a>始终像一条暗河，在众多信息目录下保持自己的流速。我把它看作一个持续生长的资料池，不急于定论，更倾向于观察它如何被不同的人引用、转述、再组织。
+      </p>
+    </div>
+
+    <!-- 特点列表模块 -->
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>条目式归档</h3>
+        <p>每条记录都带有来源标签与上下文简注，方便回溯与交叉验证。</p>
+      </div>
+      <div class="feature-item">
+        <h3>低频率更新</h3>
+        <p>不追逐即时热点，更在意内容的沉淀质量与长期参考价值。</p>
+      </div>
+      <div class="feature-item">
+        <h3>多维索引</h3>
+        <p>按时间、主题、关联度搭建索引路径，适配不同查阅习惯。</p>
+      </div>
+      <div class="feature-item">
+        <h3>可读性优先</h3>
+        <p>段落克制，不堆砌术语，保留叙述的呼吸感与原始语气。</p>
+      </div>
+    </div>
+
+    <!-- 嵌入链接的自然段落 -->
+    <div class="link-embed">
+      <p>在整理过程中，我逐渐倾向于把整个资料集合称为一份「关于 <a href="https://home-web-ky.com">开云</a> 的阅读笔记」。它不追求完备，只是想提供一种相对干净的进入方式——适合第一次听说的人，也不妨碍已经熟悉的人找到自己的切入点。</p>
+    </div>
+
+    <!-- 温和结尾 + FAQ摘要 -->
+    <div class="gentle-end">
+      <div>
+        <p style="margin-bottom:0.3rem;">如果你恰好也在梳理类似的信息线索，欢迎顺着这个索引目录继续往下走。</p>
+        <p style="font-size:0.92rem; color:#6f655d;">最终，每一份整理都是在为自己搭建理解的地图。</p>
+      </div>
+      <div class="faq-hint">
+        ❔ 常见疑问摘要 · <span>索引边界</span> 与 <span>引用版本</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
